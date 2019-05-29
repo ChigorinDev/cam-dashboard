@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Camelot</title>
+  <link rel="stylesheet" href="./fonts/montserrat/Montserrat.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/materialize.min.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+  <div class="container-fluid main-wrapper">
+    <header class="header">
+      <nav class="nav-wrapper blue valign-wrapper">
+        <div class="container valign-wrapper">
+          <a href="#" class="openLeftMenu head-icon">
+            <i class="icon-menu"></i>
+          </a>
+          <a href="#" class="head-icon"> <i class="icon-exit"></i>Выйти </a>
+
+          <!-- -------------------  Left menu ----------------------->
+          <ul class="left-menu sidenav sidenav-fixed" id="left-menu">
+            <a class="left-menu-logo">
+              <img src="./img/icons/logo.png" alt="" />
+            </a>
+            <li class="left-menu__item">
+              <a href="#" class="menu-link tooltipped" data-position="right" data-tooltip="Рабочий стол">
+                <span class="link-icon icon-home"></span>
+                <span class="menu-link__heading">Рабочий стол</span>
+              </a>
+            </li>
+            <li class="left-menu__item">
+              <a href="#" class="menu-link tooltipped" data-position="right" data-tooltip="Текущие заказы">
+                <span class="link-icon icon-box"></span>
+                <span class="menu-link__heading">Текущие заказы</span>
+              </a>
+            </li>
+            <li class="left-menu__item">
+              <a href="#" class="menu-link tooltipped" data-position="right" data-tooltip="История заказов">
+                <span class="link-icon icon-time"></span>
+                <span class="menu-link__heading">История заказов</span>
+              </a>
+            </li>
+            <li class="left-menu__item">
+              <a href="#" class="menu-link tooltipped" data-position="right" data-tooltip="План заказов">
+                <span class="link-icon icon-table"></span>
+                <span class="menu-link__heading">План заказов</span>
+              </a>
+            </li>
+            <li class="left-menu__item">
+              <a href="#" class="menu-link tooltipped" data-position="right" data-tooltip="План закупок">
+                <span class="link-icon icon-checklist"></span>
+                <span class="menu-link__heading">План закупок</span>
+              </a>
+            </li>
+            <li class="left-menu__item">
+              <a href="#" class="menu-link tooltipped" data-position="right" data-tooltip="Запросы">
+                <span class="link-icon icon-msg"></span>
+                <span class="menu-link__heading  border: 1px solid;">Запросы</span>
+              </a>
+            </li>
+            <li class="left-menu__item">
+              <a href="#" class="menu-link tooltipped" data-position="right" data-tooltip="Договоры">
+                <span class="link-icon icon-sheet"></span>
+                <span class="menu-link__heading">Договоры</span>
+              </a>
+            </li>
+            <li class="left-menu__item">
+              <a href="#" class="menu-link tooltipped" data-position="right" data-tooltip="Новинки и акции">
+                <span class="link-icon icon-procentage"></span>
+                <span class="menu-link__heading">Новинки и акции</span>
+              </a>
+            </li>
+            <li class="left-menu__item">
+              <a href="#" class="menu-link tooltipped" data-position="right" data-tooltip="Заказать образцы">
+                <span class="link-icon icon-box"></span>
+                <span class="menu-link__heading">Заказать образцы</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container-fluid main-content">
+        <!-- -------------------  Order history ----------------------->
+        <div class="row m-top-md main-content-top">
+          <div class="col s9">
+            <h4 class="heading">Итория заказов</h4>
+          </div>
+          <div class="col s3">
+            <button class=" right waves-effect waves-light btn z-depth-1 btn-custom">
+              Подать заявку
+            </button>
+          </div>
+        </div>
+        <div class="row main-content-mid">
+          <div class="col s12">
+            <!-- -------------------  Tabs  #1----------------------->
+            <div class="tab-heading">ЖД</div>
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header tab-header">
+                  <div class="tab-header-left">
+                    <div class="tab-satus valign-wrapper">
+                      <span>Огружено</span>
+                    </div>
+                    <span class="tab-info">Заказ №12345678 от 24.05.2019</span>
+                    <span class="tab-info">Доставка</span>
+                    <span class="tab-info">Валюта договора: RUB</span>
+                  </div>
+                  <div class="tab-header-right">
+                    <button class="btn btn-white">
+                      <i class="i-box icon-refresh"></i> Подать заявку
+                    </button>
+                    <span class="tab-info data-icon">дата отгрузки: 03.05.2018</span>
+                    <a class="btn-floating  waves-effect waves-light btn-small tab-trigger"><i
+                        class="icon-arrow"></i></a>
+                  </div>
+                </div>
+                <div class="collapsible-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col s6">
+                        <!-- ------------------- Customer block ----------------------->
+                        <div class="tab-body-block">
+                          <div>Покупатель:</div>
+                          <span class="name-info">OOO "Транс Альянс"</span>
+                          <div>
+                            Грузополучатель:
+                            <span class="grey-info">OOO "Самарский Лес"</span>
+                          </div>
+                          <div>
+                            Грузоотправитель:
+                            <span class="grey-info">OOO "ТаргСнаб"</span>
+                          </div>
+                        </div>
+                        <!-- ------------------- Customer block end ----------------------->
+                      </div>
+                      <div class="col s6">
+                        <!-- ------------------- Seller block ----------------------->
+                        <div class="tab-body-block">
+                          <div>Продавец:</div>
+                          <span class="name-info">ООО «Машина Каталка»</span>
+                          <div>
+                            Адрес доставки:
+                            <span class="grey-info">Россия, г. Самара, ул. Ленина 666</span>
+                          </div>
+                          <div>
+                            Адрес отгрузки:
+                            <span class="grey-info">Вестеррос, г. Королевская Гавань, ул. Бэйлора
+                              Строителя, 13</span>
+                          </div>
+                        </div>
+                        <!-- ------------------- Seller block  end----------------------->
+                      </div>
+                    </div>
+                    <!-- -------------------  Table  #1----------------------->
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="table-heading">Название товара</div>
+                        <table class="highlight centered responsive-table">
+                          <thead class="table-top">
+                            <tr>
+                              <th>Марка</th>
+                              <th>Количество</th>
+                              <th>Единиза измерения</th>
+                              <th>Цена</th>
+                              <th>Вид упаковки</th>
+                              <th>Количество мест</th>
+                              <th>Сумма НДС</th>
+                              <th>НДС</th>
+                            </tr>
+                          </thead>
+
+                          <tbody class="table-body">
+                            <tr>
+                              <td>Марка1</td>
+                              <td>5</td>
+                              <td>т</td>
+                              <td>1000</td>
+                              <td>6000</td>
+                              <td>20</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                            <tr>
+                              <td>Марка1</td>
+                              <td>5</td>
+                              <td>т</td>
+                              <td>1000</td>
+                              <td>6000</td>
+                              <td>20</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                            <tr>
+                              <td>Марка1</td>
+                              <td>5</td>
+                              <td>т</td>
+                              <td>1000</td>
+                              <td>6000</td>
+                              <td>20</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                            <tr>
+                              <td>Марка1</td>
+                              <td>5</td>
+                              <td>т</td>
+                              <td>1000</td>
+                              <td>6000</td>
+                              <td>20</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                            <tr>
+                              <td>Марка1</td>
+                              <td>5</td>
+                              <td>т</td>
+                              <td>1000</td>
+                              <td>6000</td>
+                              <td>20</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                          </tbody>
+                          <tfoot class="table-footer">
+                            <tr>
+                              <td colspan="5"></td>
+                              <td>Итого:</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="buttons-container">
+                          <button class="btn btn-white">
+                            <i class="i-box icon-print"></i> Распечатать чек
+                          </button>
+                          <button class="btn btn-white">
+                            <i class="i-box icon-sheet"></i> Заказать УПД
+                          </button>
+                          <button class="btn btn-white">
+                            <i class="i-box icon-msg"></i> Подать запрос
+                          </button>
+                          <button class="btn btn-white">
+                            <i class="i-box icon-refresh"></i> Повторить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- -------------------  Tabs  #2----------------------->
+            <div class="tab-heading">Авто</div>
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header tab-header">
+                  <div class="tab-header-left">
+                    <div class="tab-satus valign-wrapper">
+                      <span>Огружено</span>
+                    </div>
+                    <span class="tab-info">Заказ №12345678 от 24.05.2019</span>
+                    <span class="tab-info">Доставка</span>
+                    <span class="tab-info">Валюта договора: RUB</span>
+                  </div>
+                  <div class="tab-header-right">
+                    <button class="btn btn-white">
+                      <i class="i-box icon-refresh"></i> Подать заявку
+                    </button>
+                    <span class="tab-info data-icon">дата отгрузки: 03.05.2018</span>
+                    <a class="btn-floating  waves-effect waves-light btn-small tab-trigger"><i
+                        class="icon-arrow"></i></a>
+                  </div>
+                </div>
+                <div class="collapsible-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col s6">
+                        <!-- ------------------- Customer block ----------------------->
+                        <div class="tab-body-block">
+                          <div>Покупатель:</div>
+                          <span class="name-info">OOO "Транс Альянс"</span>
+                          <div>
+                            Грузополучатель:
+                            <span class="grey-info">OOO "Самарский Лес"</span>
+                          </div>
+                          <div>
+                            Грузоотправитель:
+                            <span class="grey-info">OOO "ТаргСнаб"</span>
+                          </div>
+                        </div>
+                        <!-- ------------------- Customer block end ----------------------->
+                      </div>
+                      <div class="col s6">
+                        <!-- ------------------- Seller block ----------------------->
+                        <div class="tab-body-block">
+                          <div>Продавец:</div>
+                          <span class="name-info">ООО «Машина Каталка»</span>
+                          <div>
+                            Адрес доставки:
+                            <span class="grey-info">Россия, г. Самара, ул. Ленина 666</span>
+                          </div>
+                          <div>
+                            Адрес отгрузки:
+                            <span class="grey-info">Вестеррос, г. Королевская Гавань, ул. Бэйлора
+                              Строителя, 13</span>
+                          </div>
+                        </div>
+                        <!-- ------------------- Seller block  end----------------------->
+                      </div>
+                    </div>
+                    <!-- -------------------  Table  #1----------------------->
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="table-heading">Название товара</div>
+                        <table class="highlight centered responsive-table">
+                          <thead class="table-top">
+                            <tr>
+                              <th>Марка</th>
+                              <th>Количество</th>
+                              <th>Единиза измерения</th>
+                              <th>Цена</th>
+                              <th>Вид упаковки</th>
+                              <th>Количество мест</th>
+                              <th>Сумма НДС</th>
+                              <th>НДС</th>
+                            </tr>
+                          </thead>
+
+                          <tbody class="table-body">
+                            <tr>
+                              <td>Марка1</td>
+                              <td>5</td>
+                              <td>т</td>
+                              <td>1000</td>
+                              <td>6000</td>
+                              <td>20</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                            <tr>
+                              <td>Марка1</td>
+                              <td>5</td>
+                              <td>т</td>
+                              <td>1000</td>
+                              <td>6000</td>
+                              <td>20</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                            <tr>
+                              <td>Марка1</td>
+                              <td>5</td>
+                              <td>т</td>
+                              <td>1000</td>
+                              <td>6000</td>
+                              <td>20</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                            <tr>
+                              <td>Марка1</td>
+                              <td>5</td>
+                              <td>т</td>
+                              <td>1000</td>
+                              <td>6000</td>
+                              <td>20</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                            <tr>
+                              <td>Марка1</td>
+                              <td>5</td>
+                              <td>т</td>
+                              <td>1000</td>
+                              <td>6000</td>
+                              <td>20</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                          </tbody>
+                          <tfoot class="table-footer">
+                            <tr>
+                              <td colspan="5"></td>
+                              <td>Итого:</td>
+                              <td>200 000</td>
+                              <td>10 000</td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row table-vehicle">
+                      <div class="col s12 table-vehicle__head">
+                        <div class="row">
+                          <div class="col s4">Машина</div>
+                          <div class="col s4">Прицеп</div>
+                          <div class="col s4">Водитель</div>
+                        </div>
+                      </div>
+                      <div class="col s4">
+                        <div class="table-vehicle__part">
+                          1
+                        </div>
+                      </div>
+                      <div class="col s4">
+                        <div class="table-vehicle__part">
+                          2
+                        </div>
+                      </div>
+                      <div class="col s4">
+                        <div class="table-vehicle__part">
+                          3
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="buttons-container">
+                          <button class="btn btn-white">
+                            <i class="i-box icon-print"></i> Распечатать чек
+                          </button>
+                          <button class="btn btn-white">
+                            <i class="i-box icon-sheet"></i> Заказать УПД
+                          </button>
+                          <button class="btn btn-white">
+                            <i class="i-box icon-msg"></i> Подать запрос
+                          </button>
+                          <button class="btn btn-white">
+                            <i class="i-box icon-refresh"></i> Повторить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/min-jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      //Tooltips
+      $(".tooltipped").tooltip();
+      // Left menu actions
+      $(".openLeftMenu").click(function () {
+        if ($(".left-menu").width() <= 60) {
+          $(".left-menu").addClass("showLeftMenu");
+          $(".main-wrapper").addClass("pushContent");
+          $(".menu-link__heading").addClass("heading-show");
+          //Removing tooltips
+          $(".tooltipped").tooltip("destroy");
+        } else {
+          $(".left-menu").removeClass("showLeftMenu");
+          $(".main-wrapper").removeClass("pushContent");
+          $(".menu-link__heading").removeClass("heading-show");
+          //Adding tooltips
+          $(".tooltipped").tooltip();
+        }
+      });
+
+      $(".tab-trigger").click(function () {
+        $(".collapsible").collapsible();
+        $(".tab-header-right .btn-white").toggleClass("hide");
+      });
+      $(".tab-trigger").click(function () {
+        $(this).toggleClass("tab-trigger__active");
+      });
+    });
+  </script>
+</body>
+
+</html>

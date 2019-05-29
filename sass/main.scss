@@ -1,3 +1,5 @@
+@import url("../fonts/montserrat/Montserrat.css");
+
 // color variables
 $background: #f7f7f7;
 $white: #ffffff;
@@ -7,38 +9,65 @@ $light-blue: #03abf0;
 $green: #02d420;
 $black: #000000;
 $font-black: #434343;
-$gery: #5c5c5f;
+$grey: #5c5c5f;
 $red: #fd324e;
 $light-grey: #e8e8e8;
+$lightest-grey: #f2f3f3;
 
 // utils
 .btn-custom {
+  background-color: $white;
   min-width: 13.5rem !important;
-  padding: .2rem 1.5rem !important;
   height: auto;
   border-radius: 3px;
   border: none !important;
   outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-refresh {
+.btn-white {
   @extend .btn-custom;
-  background: url(../img/icons/icon-refresh.svg) no-repeat 1.2rem /1.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: none;
   color: $blue;
   border: 1px solid $light-blue !important;
-  box-shadow: none;
+  margin-right: 1rem;
+  transition: all 0.4s;
+  width: 14rem !important;
+  height: 3rem !important;
+  padding: 0 4px !important;
 
   &:hover,
   &:focus {
     background-color: $white;
     box-shadow: none;
+    border-radius: 6px;
+    color: $white;
+    background-color: $light-blue;
+  }
+}
+
+.i-box {
+  width: 1rem;
+  height: 2rem;
+  display: inline-block;
+  margin: 0 !important;
+
+  &[class*="icon"] {
+    width: 1.5rem;
+    height: 2rem;
   }
 }
 
 .heading {
   font-size: 2rem;
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
+  font-style: normal;
+  color: $grey;
 }
 
 .m-top-md {
@@ -49,93 +78,127 @@ $light-grey: #e8e8e8;
   margin-top: 1.5rem;
 }
 
-// icons 
+// icons
 .link-icon,
 .icon-home {
-  display: block;
-  width: 2rem;
-  height: 2.5rem;
+  display: inline-block;
+  width: 1.5rem;
+  height: 2.4rem;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.icon-menu,
+.icon-exit {
+  @extend .link-icon;
+  background-image: url(../img/icons/icon-menu.png);
+  display: block;
+  margin-right: 8px;
+}
+
+.icon-menu {
+  width: 2.5rem;
+}
+
+.icon-exit {
+  background-image: url(../img/icons/icon-exit.png);
+}
+
+.icon-arrow {
+  @extend .link-icon;
+  background: url(../img/icons/down-arrow.png) no-repeat center;
+  background-size: 1.5rem;
+  margin: 0 !important;
+}
+
+.head-icon {
+  display: flex;
+  align-items: center;
+}
+
 .icon-home {
   @extend .link-icon;
-  background-image: url(../img/icons/Shape_1.svg);
+  background-image: url(../img/icons/Shape_1.png);
 }
 
 .icon-table {
   @extend .link-icon;
-  background-image: url(../img/icons/icon-timetable.svg);
+  background-image: url(../img/icons/icon-timetable.png);
 }
 
 .icon-checklist {
   @extend .link-icon;
-  background-image: url(../img/icons/icon-checklist.svg);
+  background-image: url(../img/icons/icon-checklist.png);
 }
 
 .icon-sheet {
   @extend .link-icon;
-  background-image: url(../img/icons/icon-sheet.svg);
+  background-image: url(../img/icons/icon-sheet.png);
 }
 
 .icon-box {
   @extend .link-icon;
-  background-image: url(../img/icons/icon-box.svg);
+  background-image: url(../img/icons/icon-box.png);
 }
 
 .icon-msg {
   @extend .link-icon;
-  background-image: url(../img/icons/icon-msg.svg);
+  background-image: url(../img/icons/icon-msg.png);
 }
 
 .icon-time {
   @extend .link-icon;
-  background-image: url(../img/icons/icon-time.svg);
+  background-image: url(../img/icons/icon-time.png);
 }
 
 .icon-procentage {
   @extend .link-icon;
-  background-image: url(../img/icons/icon-procentage.svg);
+  background-image: url(../img/icons/icon-procentage.png);
 }
 
 .icon-print {
   @extend .link-icon;
-  background-image: url(../img/icons/icon-time.svg);
+  background-image: url(../img/icons/icon-print.png);
 }
 
 .icon-refresh {
   @extend .link-icon;
-  background-image: url(../img/icons/icon-refresh.svg);
+  background-image: url(../img/icons/icon-refresh.png);
 }
 
-
-
 // layout
-html {
-  font-family: 'Montserrat', sans-serif !important;
+body {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 400 !important;
 }
 
 .main-wrapper {
   padding-left: 4rem;
-  transition: all .42s;
+  transition: all 0.42s;
   background-color: $background;
 }
 
-// header 
+// header
 .nav-wrapper .container {
   justify-content: space-between;
 }
 
-
 // left menu
 .left-menu-logo {
-  background: url(../img/icons/logo.png) no-repeat center;
   display: block;
   width: 100%;
   height: 4.2rem;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 160%;
+    max-width: 7rem;
+    display: block;
+  }
 }
 
 .left-menu {
@@ -144,7 +207,7 @@ html {
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.17);
   -webkit-transform: translateX(0) !important;
   transform: translateX(0) !important;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &__item:not(:nth-child(odd)) {
     border-top: 1px solid #e8e8e8;
@@ -153,32 +216,39 @@ html {
 
   .menu-link {
     display: flex;
-    padding: .8rem 0;
+    padding: 0.8rem 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: auto;
     border-left: 4px solid transparent;
-    transition: all .4s;
+    transition: all 0.2s;
 
     &:hover,
     &:focus {
-      background-color: rgba($light-blue, .1);
+      background-color: rgba($light-blue, 0.1);
       border-left-color: $blue;
       color: $light-blue;
-      text-shadow: $light-blue .1px .1px 1.2px;
     }
 
     &__heading {
-      display: none;
+      opacity: 0;
+      height: 0;
       line-height: initial;
-      margin-top: .5rem;
-      font-size: 14px;
+      margin-top: 0.5rem;
+      font-size: 0px;
+
+      &.heading-show {
+        opacity: 1;
+        height: initial;
+        font-size: 14px;
+        transition: opacity .2s, font-size .3s;
+      }
     }
   }
 }
 
-// main section 
+// main section
 .main {
   width: 100%;
   min-height: 100vh;
@@ -194,13 +264,17 @@ html {
   }
 }
 
-
-
 // collapsible tabs
+
+.collapsible {
+  border-radius: 6px;
+}
+
 .tab-heading {
   font-size: 2rem;
   color: $blue;
-  font-weight: 400;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .tab-header {
@@ -220,13 +294,21 @@ html {
 }
 
 .tab-info {
-  color: $gery;
-  padding: .65rem;
+  color: $grey;
+  padding: 0 1rem;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgba($grey, 0.14);
+  }
 }
 
 .tab-info.data-icon {
   padding-left: 2rem;
-  background: url(../img/icons/icon-table-sm.png) no-repeat .2rem;
+  background: url(../img/icons/icon-table-sm.png) no-repeat 0.2rem;
 }
 
 .tab-header-left {
@@ -263,10 +345,17 @@ html {
 .tab-trigger {
   background: $dark-blue;
   margin: 0 1rem;
+  content: "B";
+  display: block;
 
   &:hover,
   &:focus {
-    background: lighten($color: $dark-blue, $amount: 5)
+    background: lighten($color: $dark-blue, $amount: 5);
+  }
+
+  &__active {
+    background: $red !important;
+    transform: rotate(180deg);
   }
 }
 
@@ -274,16 +363,78 @@ html {
   background: $white;
 }
 
+.tab-body-block {
+  div {
+    // color: $grey;
+    letter-spacing: 0.13px;
+    color: #434343;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Montserrat";
+  }
+
+  .name-info {
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+    color: $font-black;
+  }
+
+  .grey-info {
+    font-size: 14px;
+    color: $grey;
+  }
+}
+
+// Tables
+.table-heading {
+  font-weight: 700;
+  font-size: 17px;
+  color: $font-black;
+}
+
+.table-top {
+  th {
+    color: $font-black;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+  }
+}
+
+.table-body {
+  td {
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey;
+  }
+}
+
+.table-footer {
+  td {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: $font-black;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+}
 
 
+.table-vehicle {
+  &__head {
+    background-color: $lightest-grey;
+  }
 
-
-
-
-
-
-
-
+  &__part {
+    background: #03abf0;
+  }
+}
 
 
 
@@ -297,12 +448,20 @@ html {
   width: 14rem;
 }
 
+.showLeftMenu .hide {
+  display: none;
+}
+
 .hide {
   display: none;
 }
 
-.show {
-  display: block;
-}
 
-.menu-link__heading.heading-show {}
+.material-tooltip {
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.1),
+    0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to left,
+      rgba(#0084cf, 0.8) 15%,
+      rgba(#00d4ff, 0.82) 100%);
+  font-size: 14px;
+}
