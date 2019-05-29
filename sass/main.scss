@@ -98,7 +98,7 @@ $lightest-grey: #f2f3f3;
 }
 
 .icon-menu {
-  width: 2.5rem;
+  width: 1.8rem;
 }
 
 .icon-exit {
@@ -237,12 +237,14 @@ body {
       line-height: initial;
       margin-top: 0.5rem;
       font-size: 0px;
+      margin: 0;
+      transition: opacity 0.2s, font-size 0.3s;
 
       &.heading-show {
         opacity: 1;
         height: initial;
         font-size: 14px;
-        transition: opacity .2s, font-size .3s;
+        transition: opacity 0.2s, font-size 0.4s;
       }
     }
   }
@@ -338,7 +340,7 @@ body {
 
   //js
   background: url(../img/icons/icon-circle-white.svg) no-repeat 1.2rem /1.8rem,
-  linear-gradient($green 1%, $green 100%);
+    linear-gradient($green 1%, $green 100%);
   color: $white;
 }
 
@@ -421,23 +423,72 @@ body {
 }
 
 .buttons-container {
+  margin-top: 2rem;
   display: flex;
   justify-content: flex-end;
+
+  .btn-white {
+    margin: 0 0 0 1rem;
+  }
 }
 
-
 .table-vehicle {
-  &__head {
-    background-color: $lightest-grey;
-  }
-
   &__part {
     background: #03abf0;
   }
 }
 
+.vehicle-head {
+  background-color: $lightest-grey;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+}
 
+.vehicle-part {
+  // background-color: $light-blue;
+}
 
+.vehicle-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  .info-left,
+  .info-right {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    font-size: normal;
+  }
+  .info-right {
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+.driver-info {
+  margin-top: 1rem;
+  text-align: center;
+  .driver-name,
+  .driver-phone {
+    display: block;
+  }
+
+  .driver-name {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    color: $font-black;
+  }
+  .driver-phone {
+    margin-top: 1rem;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    color: $blue;
+  }
+}
 
 // Js classes
 .pushContent {
@@ -456,12 +507,13 @@ body {
   display: none;
 }
 
-
 .material-tooltip {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.1),
     0 3px 1px -1px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to left,
-      rgba(#0084cf, 0.8) 15%,
-      rgba(#00d4ff, 0.82) 100%);
+  background: linear-gradient(
+    to left,
+    rgba(#0084cf, 0.8) 15%,
+    rgba(#00d4ff, 0.82) 100%
+  );
   font-size: 14px;
 }

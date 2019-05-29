@@ -67,7 +67,7 @@
   margin-right: 8px; }
 
 .icon-menu {
-  width: 2.5rem; }
+  width: 1.8rem; }
 
 .icon-exit {
   background-image: url(../img/icons/icon-exit.png); }
@@ -164,12 +164,14 @@ body {
       height: 0;
       line-height: initial;
       margin-top: 0.5rem;
-      font-size: 0px; }
+      font-size: 0px;
+      margin: 0;
+      transition: opacity 0.2s, font-size 0.3s; }
       .left-menu .menu-link__heading.heading-show {
         opacity: 1;
         height: initial;
         font-size: 14px;
-        transition: opacity .2s, font-size .3s; }
+        transition: opacity 0.2s, font-size 0.4s; }
 
 .main {
   width: 100%;
@@ -291,14 +293,53 @@ body {
   color: #434343; }
 
 .buttons-container {
+  margin-top: 2rem;
   display: flex;
   justify-content: flex-end; }
-
-.table-vehicle__head {
-  background-color: #f2f3f3; }
+  .buttons-container .btn-white {
+    margin: 0 0 0 1rem; }
 
 .table-vehicle__part {
   background: #03abf0; }
+
+.vehicle-head {
+  background-color: #f2f3f3;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal; }
+
+.vehicle-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem; }
+  .vehicle-info .info-left,
+  .vehicle-info .info-right {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    font-size: normal; }
+  .vehicle-info .info-right {
+    font-size: 15px;
+    font-weight: 500; }
+
+.driver-info {
+  margin-top: 1rem;
+  text-align: center; }
+  .driver-info .driver-name,
+  .driver-info .driver-phone {
+    display: block; }
+  .driver-info .driver-name {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    color: #434343; }
+  .driver-info .driver-phone {
+    margin-top: 1rem;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    color: #02a3e5; }
 
 .pushContent {
   padding-left: 14rem; }
